@@ -3,47 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/tier.css">
-    <script src="js/servants.js"></script>
+    <script src="js/polyfill.js"></script>
+	<script src="js/servants.js"></script>
 	<script src="js/tier.js"></script>
     <title>Servant Tier Lister</title>
 </head>
 <body>
 	<div class="row">
 		<div class="column left" contenteditable>S</div>
-		<div class="container column right" id="contS"></div>
+		<div class="column right" id="contS"></div>
 	</div>
 	<div class="row">
 		<div class="column left" contenteditable>A</div>
-		<div class="container column right" id="contA"></div>
+		<div class="column right" id="contA"></div>
 	</div>
 	<div class="row">
 		<div class="column left" contenteditable>B</div>
-		<div class="container column right" id="contB"></div>
+		<div class="column right" id="contB"></div>
 	</div>
 	<div class="row">
 		<div class="column left" contenteditable>C</div>
-		<div class="container column right" id="contC"></div>
+		<div class="column right" id="contC"></div>
 	</div>
 	<div class="row">
 		<div class="column left" contenteditable>D</div>
-		<div class="container column right" id="contD"></div>
+		<div class="column right" id="contD"></div>
 	</div>
 	<div class="row">
 		<div class="column left" contenteditable>E</div>
-		<div class="container column right" id="contE"></div>
+		<div class="column right" id="contE"></div>
 	</div>
 	<div class="row">
 		<div class="column left" contenteditable>F</div>
-		<div class="container column right" id="contF"></div>
+		<div class="column right" id="contF"></div>
 	</div>
 	<br>
 	<div class="row">
-		<div class="container column full" id="contInitial">
-
-		</div>
-	</div>
-	<div class="row">
-		<div class="container column full" id="filters">
+		<div class="column full" id="filters">
 			<span class="label">Rarity:</span> 
 			[<input type="checkbox" id="rarity0" checked/> 0⭐] 
 			[<input type="checkbox" id="rarity1" checked/> 1⭐] 
@@ -71,6 +67,12 @@
 			[<input type="checkbox" id="pretender" checked/> Pretender] 
 			<br>
 			<button onclick="filter()">Filter</button>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="column full" id="contInitial">
+
 		</div>
 	</div>
 </body>

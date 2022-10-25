@@ -29,7 +29,6 @@ function init() {
             ev.preventDefault();
         }
         container.ondrop = function(ev) {
-			console.log(ev)
             ev.preventDefault();
             let servants = JSON.parse(ev.dataTransfer.getData('servants'));
             let prevParentId = ev.dataTransfer.getData('prevParentId');
@@ -106,8 +105,6 @@ function filter(){
 	let servs = document.querySelectorAll('.servants');
 	for (var i = 0; i < servs.length; i++) {
 		servant = servs.item(i);
-		console.log(servant)
-		console.log(servant.getAttribute["attribute"]=="beast")	
 		switch(true) { 
 			case (servant.getAttribute("servantClass")=="grandCaster"):
 			case (servant.id=="152"):
