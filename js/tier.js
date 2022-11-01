@@ -67,6 +67,8 @@ function init() {
 	filter();
 }
 
+var stop = true;
+
 function createServantNode(servants) {
     let node = document.createElement('div');
     let img = document.createElement('div');
@@ -81,10 +83,26 @@ function createServantNode(servants) {
     node.classList.add('servants');
     node.appendChild(img);
     node.draggable = 'true';
-    node.ondragstart = function(ev) {
-        ev.dataTransfer.setData('servants', JSON.stringify(servants));
-        ev.dataTransfer.setData('prevParentId', node.parentElement.id);
+    node.ondragstart = (e)=>{
+        e.dataTransfer.setData('servants', JSON.stringify(servants));
+        e.dataTransfer.setData('prevParentId', node.parentElement.id);
     }
+	node.ondrag = (e)=> {
+		stop = true;
+
+		if (e.clientY < 150) {
+			stop = false;
+			scroll(-1)
+		}
+
+		if (e.clientY > (window.innerHeight - 150)) {
+			stop = false;
+			scroll(1)
+		}
+	}
+	node.ondragend = (e)=> {
+		stop = true;
+	}
 
     return node;
 }

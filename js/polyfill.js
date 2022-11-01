@@ -214,6 +214,17 @@ var DragDropTouch;
               return;
             }
             if (this._shouldHandleMove(e) || this._shouldHandlePressHoldMove(e)) {
+				stop = true;
+
+				if (e.clientY < 150) {
+					stop = false;
+					scroll(-1)
+				}
+
+				if (e.clientY > (window.innerHeight - 150)) {
+					stop = false;
+					scroll(1)
+				}
                 // see if target wants to handle move
                 var target = this._getTarget(e);
                 if (this._dispatchEvent(e, 'mousemove', target)) {
@@ -244,6 +255,7 @@ var DragDropTouch;
         };
         DragDropTouch.prototype._touchend = function (e) {
             if (this._shouldHandle(e)) {
+				stop = true;
                 // see if target wants to handle up
                 if (this._dispatchEvent(this._lastTouch, 'mouseup', e.target)) {
                     e.preventDefault();
@@ -450,3 +462,18 @@ var DragDropTouch;
     DragDropTouch._ptProps = 'pageX,pageY,clientX,clientY,screenX,screenY,offsetX,offsetY'.split(',');
     DragDropTouch_1.DragDropTouch = DragDropTouch;
 })(DragDropTouch || (DragDropTouch = {}));
+
+
+
+
+
+
+
+
+var scroll = function (step) {
+	var scrollY = window.pageYOffset;
+	window.scrollTo(0, scrollY + step);
+	if (!stop) {
+		setTimeout(function () { scroll(step) }, 20);
+	}
+}
