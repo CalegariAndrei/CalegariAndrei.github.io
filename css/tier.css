@@ -159,6 +159,12 @@ html2canvas .row:nth-of-type(8) .left {
   font-size: 28px;
   font-weight: bold;
 }
+.download {
+  color: #aaaaaa;
+  float: left;
+  font-size: 28px;
+  font-weight: bold;
+}
 
 .close:hover,
 .close:focus {

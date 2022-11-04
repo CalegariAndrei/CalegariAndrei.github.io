@@ -145,7 +145,8 @@ function print(){
 	var modalContent = document.getElementById("modal")
 	html2canvas(document.getElementById("html2canvas")).then((canvas)=>{
 		modalContent.innerHTML = "";
-		modalContent.appendChild(canvas)
+		modalContent.appendChild(canvas);
+		document.getElementsByClassName("download")[0].setAttribute("href", canvas.toDataURL('image/png'));
 	});
 	modal.style.display = "block";
 	document.getElementsByClassName("close")[0].onclick = function(event) {
