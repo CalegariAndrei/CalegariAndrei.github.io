@@ -137,3 +137,23 @@ function filter(){
 		}
 	}
 }
+
+
+
+function print(){
+	var modal = document.getElementById("print");
+	var modalContent = document.getElementById("modal")
+	html2canvas(document.getElementById("html2canvas")).then((canvas)=>{
+		modalContent.innerHTML = "";
+		modalContent.appendChild(canvas)
+	});
+	modal.style.display = "block";
+	document.getElementsByClassName("close")[0].onclick = function(event) {
+		modal.style.display = "none";
+	}
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+	}
+}

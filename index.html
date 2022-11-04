@@ -6,9 +6,17 @@
     <script src="js/polyfill.js"></script>
 	<script src="js/servants.js"></script>
 	<script src="js/tier.js"></script>
+	<script src="js/html2canvas.js"></script>
+
     <title>Servant Tier Lister</title>
 </head>
 <body>
+	<div class="row">
+		<div class="column full">
+			<button onclick="print()">Save as image</button>
+		</div>
+	</div>
+	<html2canvas id="html2canvas">
 	<div class="row">
 		<div class="column left" contenteditable>S</div>
 		<div class="container column right" id="contS"></div>
@@ -37,6 +45,7 @@
 		<div class="column left" contenteditable>F</div>
 		<div class="container column right" id="contF"></div>
 	</div>
+	</html2canvas>
 	<div class="row">
 		<div class="column full" id="filters">
 			<span class="label">Rarity:</span> 
@@ -75,4 +84,10 @@
 		</div>
 	</div>
 </body>
+
+<modal id="print" class="modal">
+	<span class="close">&times;</span>
+	<div class="modal-content" id="modal">
+	</div>
+</modal>
 </html>
