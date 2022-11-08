@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/tier.css">
+    <script src="/js/polyfill.js"></script>
+	<script src="/js/servants.js"></script>
+	<script src="./js/tier.js"></script>
+	<script src="/js/html2canvas.js"></script>
+
+    <title>FGO Servant Tier List Maker</title>
+</head>
+<body>
+	<iframe src="/menu.html" onload="this.insertAdjacentHTML('afterend', (this.contentDocument.body.innerHTML));this.remove();addCustom();"></iframe>
+	<html2canvas id="html2canvas">
+	<div class="row">
+		<div class="column left" contenteditable>S</div>
+		<div class="container column right" id="contS"></div>
+	</div>
+	<div class="row">
+		<div class="column left" contenteditable>A</div>
+		<div class="container column right" id="contA"></div>
+	</div>
+	<div class="row">
+		<div class="column left" contenteditable>B</div>
+		<div class="container column right" id="contB"></div>
+	</div>
+	<div class="row">
+		<div class="column left" contenteditable>C</div>
+		<div class="container column right" id="contC"></div>
+	</div>
+	<div class="row">
+		<div class="column left" contenteditable>D</div>
+		<div class="container column right" id="contD"></div>
+	</div>
+	<div class="row">
+		<div class="column left" contenteditable>E</div>
+		<div class="container column right" id="contE"></div>
+	</div>
+	<div class="row">
+		<div class="column left" contenteditable>F</div>
+		<div class="container column right" id="contF"></div>
+	</div>
+	</html2canvas>
+	<div class="row">
+		<div class="column full" id="filters">
+			<span class="label">Rarity:</span> 
+			[<input type="checkbox" id="rarity0" checked/> 0⭐] 
+			[<input type="checkbox" id="rarity1" checked/> 1⭐] 
+			[<input type="checkbox" id="rarity2" checked/> 2⭐] 
+			[<input type="checkbox" id="rarity3" checked/> 3⭐] 
+			[<input type="checkbox" id="rarity4" checked/> 4⭐] 
+			[<input type="checkbox" id="rarity5" checked/> 5⭐]
+			<br>
+			<span class="label">Class:</span> 
+			[<input type="checkbox" id="saber" checked/> Saber] 
+			[<input type="checkbox" id="archer" checked/> Archer] 
+			[<input type="checkbox" id="lancer" checked/> Lancer] 
+			[<input type="checkbox" id="rider" checked/> Rider] 
+			[<input type="checkbox" id="caster" checked/> Caster] 
+			[<input type="checkbox" id="assassin" checked/> Assassin] 
+			[<input type="checkbox" id="berserker" checked/> Berserker] 
+			<br>
+			[<input type="checkbox" id="shielder" checked/> Shielder] 
+			[<input type="checkbox" id="beast" checked/> Beast] 
+			[<input type="checkbox" id="ruler" checked/> Ruler] 
+			[<input type="checkbox" id="avenger" checked/> Avenger] 
+			[<input type="checkbox" id="mooncancer" checked/> Moon Cancer]
+			[<input type="checkbox" id="foreigner" checked/> Foreigner] 
+			[<input type="checkbox" id="alterego" checked/> Alter Ego] 
+			[<input type="checkbox" id="pretender" checked/> Pretender] 
+			<br>
+			<button onclick="filter()">Filter</button>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="container column full" id="contInitial">
+
+		</div>
+	</div>
+</body>
+
+<modal id="print" class="modal">
+	<a href="" download="download" class="download">Download</a>
+	<span class="close">&times;</span>
+	<div class="modal-content" id="modal">
+	</div>
+</modal>
+
+<script>
+	function addCustom(){
+		document.getElementById("nav").innerHTML += 
+			`<a href="#" onclick="print()" style="float: right;">
+			<svg height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM323.8 202.5c-4.5-6.6-11.9-10.5-19.8-10.5s-15.4 3.9-19.8 10.5l-87 127.6L170.7 297c-4.6-5.7-11.5-9-18.7-9s-14.2 3.3-18.7 9l-64 80c-5.8 7.2-6.9 17.1-2.9 25.4s12.4 13.6 21.6 13.6h96 32H424c8.9 0 17.1-4.9 21.2-12.8s3.6-17.4-1.4-24.7l-120-176zM112 192c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48z"/></svg>
+			Save as image
+			</a>`;
+	}
+</script>
+
+
+</html>

@@ -1,0 +1,51 @@
+.swiper-button-prev {
+    width: 50px;
+    height: 290px;
+    background: url(../img/ui/left_btn.png) no-repeat;
+    background-size: contain;
+}
+.swiper-button-next {
+    width: 51px;
+    height: 290px;
+    background: url(../img/ui/right_btn.png) no-repeat;
+    background-size: contain;
+}
+
+.container .row {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+button#btn-draw-once {
+    background: url('../img/ui/btn-summon-1.png');
+    width: 194px;
+    height: 74px;
+}
+
+button#btn-draw-twice {
+    background: url('../img/ui/btn-summon-2.png');
+    width: 194px;
+    height: 74px;
+}
+
+button#btn-draw-timesten {
+    background: url('../img/ui/btn-summon-10.png');
+    width: 194px;
+    height: 74px;
+}
+
+div#saint_quartz_box {
+    display: block;
+    position: absolute;
+    width: 150px;
+    height: 44px;
+    left: 208px;
+    top: -5px;
+    background-color: #999;
+    border: 1px solid #233;
+}
+
+.banner {
+	height: calc(574px*0.5);
+	width: calc(1016px*0.5);
+}
