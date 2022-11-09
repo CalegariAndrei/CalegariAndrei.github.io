@@ -45,30 +45,30 @@
 	<div class="row">
 		<div class="column full" id="filters">
 			<span class="label">Rarity:</span> 
-			[<input type="checkbox" id="rarity0" checked/> 0⭐] 
-			[<input type="checkbox" id="rarity1" checked/> 1⭐] 
-			[<input type="checkbox" id="rarity2" checked/> 2⭐] 
-			[<input type="checkbox" id="rarity3" checked/> 3⭐] 
-			[<input type="checkbox" id="rarity4" checked/> 4⭐] 
-			[<input type="checkbox" id="rarity5" checked/> 5⭐]
+			<filteroption><input type="checkbox" id="rarity0" checked style="display:none"/><button onclick="check(this)" style="background-color:green">0⭐</button></filteroption>
+			<filteroption><input type="checkbox" id="rarity1" checked style="display:none"/><button onclick="check(this)" style="background-color:green">1⭐</button></filteroption>
+			<filteroption><input type="checkbox" id="rarity2" checked style="display:none"/><button onclick="check(this)" style="background-color:green">2⭐</button></filteroption>
+			<filteroption><input type="checkbox" id="rarity3" checked style="display:none"/><button onclick="check(this)" style="background-color:green">3⭐</button></filteroption>
+			<filteroption><input type="checkbox" id="rarity4" checked style="display:none"/><button onclick="check(this)" style="background-color:green">4⭐</button></filteroption>
+			<filteroption><input type="checkbox" id="rarity5" checked style="display:none"/><button onclick="check(this)" style="background-color:green">5⭐</button></filteroption>
 			<br>
 			<span class="label">Class:</span> 
-			[<input type="checkbox" id="saber" checked/> Saber] 
-			[<input type="checkbox" id="archer" checked/> Archer] 
-			[<input type="checkbox" id="lancer" checked/> Lancer] 
-			[<input type="checkbox" id="rider" checked/> Rider] 
-			[<input type="checkbox" id="caster" checked/> Caster] 
-			[<input type="checkbox" id="assassin" checked/> Assassin] 
-			[<input type="checkbox" id="berserker" checked/> Berserker] 
+			<filteroption><input type="checkbox" id="saber" checked style="display:none"/><button onclick="check(this)" style="background-color:green">Saber</button></filteroption>
+			<filteroption><input type="checkbox" id="archer" checked style="display:none"/><button onclick="check(this)" style="background-color:green">Archer</button></filteroption>
+			<filteroption><input type="checkbox" id="lancer" checked style="display:none"/><button onclick="check(this)" style="background-color:green">Lancer</button></filteroption>
+			<filteroption><input type="checkbox" id="rider" checked style="display:none"/><button onclick="check(this)" style="background-color:green">Rider</button></filteroption>
+			<filteroption><input type="checkbox" id="caster" checked style="display:none"/><button onclick="check(this)" style="background-color:green">Caster</button></filteroption>
+			<filteroption><input type="checkbox" id="assassin" checked style="display:none"/><button onclick="check(this)" style="background-color:green">Assassin</button></filteroption>
+			<filteroption><input type="checkbox" id="berserker" checked style="display:none"/><button onclick="check(this)" style="background-color:green">Berserker</button></filteroption>
 			<br>
-			[<input type="checkbox" id="shielder" checked/> Shielder] 
-			[<input type="checkbox" id="beast" checked/> Beast] 
-			[<input type="checkbox" id="ruler" checked/> Ruler] 
-			[<input type="checkbox" id="avenger" checked/> Avenger] 
-			[<input type="checkbox" id="mooncancer" checked/> Moon Cancer]
-			[<input type="checkbox" id="foreigner" checked/> Foreigner] 
-			[<input type="checkbox" id="alterego" checked/> Alter Ego] 
-			[<input type="checkbox" id="pretender" checked/> Pretender] 
+			<filteroption><input type="checkbox" id="shielder" checked style="display:none"/><button onclick="check(this)" style="background-color:green">Shielder</button></filteroption>
+			<filteroption><input type="checkbox" id="beast" checked style="display:none"/><button onclick="check(this)" style="background-color:green">Beast</button></filteroption>
+			<filteroption><input type="checkbox" id="ruler" checked style="display:none"/><button onclick="check(this)" style="background-color:green">Ruler</button></filteroption>
+			<filteroption><input type="checkbox" id="avenger" checked style="display:none"/><button onclick="check(this)" style="background-color:green">Avenger</button></filteroption>
+			<filteroption><input type="checkbox" id="mooncancer" checked style="display:none"/><button onclick="check(this)" style="background-color:green">Moon Cancer</filteroption>
+			<filteroption><input type="checkbox" id="foreigner" checked style="display:none"/><button onclick="check(this)" style="background-color:green">Foreigner</button></filteroption>
+			<filteroption><input type="checkbox" id="alterego" checked style="display:none"/><button onclick="check(this)" style="background-color:green">Alter Ego</button></filteroption>
+			<filteroption><input type="checkbox" id="pretender" checked style="display:none"/><button onclick="check(this)" style="background-color:green">Pretender</button></filteroption>
 			<br>
 			<button onclick="filter()">Filter</button>
 		</div>
@@ -95,6 +95,11 @@
 			<svg height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM323.8 202.5c-4.5-6.6-11.9-10.5-19.8-10.5s-15.4 3.9-19.8 10.5l-87 127.6L170.7 297c-4.6-5.7-11.5-9-18.7-9s-14.2 3.3-18.7 9l-64 80c-5.8 7.2-6.9 17.1-2.9 25.4s12.4 13.6 21.6 13.6h96 32H424c8.9 0 17.1-4.9 21.2-12.8s3.6-17.4-1.4-24.7l-120-176zM112 192c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48z"/></svg>
 			Save as image
 			</a>`;
+	}
+	function check(button){
+		button.parentElement.firstChild.checked = !button.parentElement.firstChild.checked;
+		if(button.parentElement.firstChild.checked) button.style.backgroundColor = "green";
+		else button.style.backgroundColor = "red";
 	}
 </script>
 
